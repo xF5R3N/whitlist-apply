@@ -1,0 +1,355 @@
+<html>
+ <head>
+  <title>
+   Whitelist apply
+  </title>
+  <link rel="icon" href="_f7c4972e-7ec6-470e-a4c9-2e32777c8c83.jpeg">
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-100">
+  <header class="bg-white shadow">
+   <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+    <div class="flex items-center">
+     <img alt="Company logo with a modern design" class="h-10 w-10" height="50" src="_f7c4972e-7ec6-470e-a4c9-2e32777c8c83.jpeg" width="50"/>
+     <span class="ml-3 text-xl font-bold text-gray-800">
+      Apply your whitelist
+     </span>
+    </div>
+    <nav class="space-x-4">
+     <a class="text-gray-600 hover:text-gray-800" href="#">
+      Home
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="https://discord.gg/U6yVZr2K" id="contactLink">
+      Contact
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="#" id="adminPanelLink">
+      Admin Panel
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="#" id="checkWhitelistLink">
+      Check Your Whitelist
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main class="container mx-auto px-4 py-10">
+   <div class="bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold mb-6">
+     Apply for Whitelist
+    </h2>
+    <form class="space-y-6" id="whitelistForm">
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="name">
+       discord Name
+      </label>
+      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="name" name="name" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="email">
+       Email Address
+      </label>
+      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="email" name="email" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="username">
+       Minecraft username
+      </label>
+      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="username" name="username" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="reason">
+       what you can do ?
+      </label>
+      <textarea class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="reason" minlength="2" name="reason" required="" rows="4"></textarea>
+     </div>
+     <div class="flex items-center">
+      <input class="h-4 w-4 text-indigo-600 border-gray-300 rounded" id="terms" name="terms" required="" type="checkbox"/>
+      <label class="ml-2 block text-sm text-gray-900" for="terms">
+       I agree to the
+       <a class="text-indigo-600 hover:text-indigo-800" href="#">
+        terms and conditions
+       </a>
+      </label>
+     </div>
+     <div>
+      <button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">
+       Submit Application
+      </button>
+     </div>
+    </form>
+    <div class="mt-6 text-center text-lg font-medium" id="message">
+    </div>
+   </div>
+  </main>
+  <footer class="bg-white shadow mt-10">
+   <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+    <p class="text-gray-600">
+     © 2023 Whitelist Application. All rights reserved.
+    </p>
+    <div class="space-x-4">
+     <a class="text-gray-600 hover:text-gray-800" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="text-gray-600 hover:text-gray-800" href="https://discord.gg/U6yVZr2K">
+      <i class="fab fa-discord">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <div class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center hidden" id="adminPanel">
+   <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+    <h2 class="text-2xl font-bold mb-6 text-center">
+     Admin Login
+    </h2>
+    <form class="space-y-6" id="adminLoginForm">
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="adminUsername">
+       Username
+      </label>
+      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="adminUsername" name="adminUsername" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="adminPassword">
+       Password
+      </label>
+      <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="adminPassword" name="adminPassword" required="" type="password"/>
+     </div>
+     <div>
+      <button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">
+       Login
+      </button>
+     </div>
+    </form>
+    <div class="mt-6 text-center text-lg font-medium" id="adminMessage">
+    </div>
+   </div>
+  </div>
+  <div class="fixed inset-0 bg-gray-100 flex items-center justify-center hidden" id="adminDashboard">
+   <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full">
+    <h2 class="text-3xl font-bold mb-6 text-center">
+     Admin Dashboard
+    </h2>
+    <div class="space-y-4" id="applicationsList">
+     <!-- Applications will be dynamically added here -->
+    </div>
+    <div class="mt-6 text-center">
+     <button class="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="goHomeButton">
+      Go to Home
+     </button>
+    </div>
+   </div>
+  </div>
+  <div class="fixed inset-0 bg-gray-100 flex items-center justify-center hidden" id="checkWhitelist">
+   <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full">
+    <h2 class="text-3xl font-bold mb-6 text-center">
+     Check Your Whitelist Status
+    </h2>
+    <div class="space-y-4" id="userApplicationsList">
+     <!-- User applications will be dynamically added here -->
+    </div>
+    <div class="mt-6 text-center">
+     <button class="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="goHomeButtonFromCheck">
+      Go to Home
+     </button>
+    </div>
+   </div>
+  </div>
+  <div class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center hidden" id="discordArticle">
+   <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full relative">
+    <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" id="closeDiscordArticle">
+     <i class="fas fa-times">
+     </i>
+    </button>
+    <h2 class="text-2xl font-bold mb-4 text-center">
+     Join Our Discord Server
+    </h2>
+    <p class="text-gray-700 mb-4">
+     Stay updated with the latest news and connect with our community by joining our Discord server. Click the link below to join now!
+    </p>
+    <div class="text-center">
+     <a class="text-indigo-600 hover:text-indigo-800 font-medium" href="https://discord.gg/U6yVZr2K" target="_blank">
+      Join Discord Server
+     </a>
+    </div>
+   </div>
+  </div>
+  <script>
+   let userApplications = [];
+
+        document.getElementById('whitelistForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+            const reason = document.getElementById('reason').value;
+            const terms = document.getElementById('terms').checked;
+
+            if (userApplications.some(app => app.email === email)) {
+                document.getElementById('message').innerText = 'You have already submitted an application.';
+                document.getElementById('message').classList.add('text-red-600');
+                document.getElementById('message').classList.remove('text-green-600');
+            } else {
+                if (name && email && username && reason && terms) {
+                    const application = { name, email, username, reason, status: 'pending' };
+                    userApplications.push(application);
+                    addApplicationToAdminDashboard(application);
+                    addUserApplication(application);
+                    document.getElementById('message').innerText = 'Congratulations! Your application has been submitted successfully.';
+                    document.getElementById('message').classList.add('text-green-600');
+                    document.getElementById('message').classList.remove('text-red-600');
+                }
+            }
+        });
+
+        document.getElementById('adminPanelLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('adminPanel').classList.remove('hidden');
+        });
+
+        document.getElementById('adminLoginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const adminUsername = document.getElementById('adminUsername').value;
+            const adminPassword = document.getElementById('adminPassword').value;
+
+            let adminMessage = '';
+            if (adminUsername === 'issam' && adminPassword === 'issam123') {
+                adminMessage = 'Login successful!';
+                document.getElementById('adminMessage').classList.add('text-green-600');
+                document.getElementById('adminMessage').classList.remove('text-red-600');
+                document.getElementById('adminPanel').classList.add('hidden');
+                document.getElementById('adminDashboard').classList.remove('hidden');
+            } else {
+                adminMessage = 'Invalid username or password.';
+                document.getElementById('adminMessage').classList.add('text-red-600');
+                document.getElementById('adminMessage').classList.remove('text-green-600');
+            }
+            document.getElementById('adminMessage').innerText = adminMessage;
+        });
+
+        document.getElementById('goHomeButton').addEventListener('click', function() {
+            document.getElementById('adminDashboard').classList.add('hidden');
+        });
+
+        document.getElementById('checkWhitelistLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('checkWhitelist').classList.remove('hidden');
+        });
+
+        document.getElementById('goHomeButtonFromCheck').addEventListener('click', function() {
+            document.getElementById('checkWhitelist').classList.add('hidden');
+        });
+
+        document.getElementById('contactLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'https://discord.com/invite/your-discord-server';
+        });
+
+        function handleDecision(decision, button) {
+            const parentDiv = button.closest('.flex');
+            const icon = document.createElement('i');
+            icon.classList.add('fas', 'fa-check-circle', 'text-green-500', 'text-2xl');
+            if (decision === 'reject') {
+                icon.classList.remove('fa-check-circle', 'text-green-500');
+                icon.classList.add('fa-times-circle', 'text-red-500');
+            }
+            parentDiv.innerHTML = '';
+            parentDiv.appendChild(icon);
+
+            const applicationDiv = parentDiv.closest('.application');
+            const email = applicationDiv.querySelector('.application-email').innerText;
+            const status = decision === 'accept' ? 'accepted' : 'rejected';
+            updateUserApplicationStatus(email, status);
+            sendDecisionEmail(email, decision);
+        }
+
+        function addApplicationToAdminDashboard(application) {
+            const applicationsList = document.getElementById('applicationsList');
+            const applicationDiv = document.createElement('div');
+            applicationDiv.classList.add('bg-gray-100', 'p-6', 'rounded-lg', 'shadow-md', 'flex', 'justify-between', 'items-center', 'application');
+            applicationDiv.innerHTML = `
+                <div>
+                    <p class="text-lg font-medium">${application.name}</p>
+                    <p class="text-sm text-gray-600 application-email">${application.email}</p>
+                    <p class="text-sm text-gray-600">Username: ${application.username}</p>
+                    <p class="text-sm text-gray-600">Reason: ${application.reason}</p>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" onclick="handleDecision('accept', this)">
+                        Accept
+                    </button>
+                    <button class="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" onclick="handleDecision('reject', this)">
+                        Reject
+                    </button>
+                </div>
+            `;
+            applicationsList.appendChild(applicationDiv);
+        }
+
+        function addUserApplication(application) {
+            const userApplicationsList = document.getElementById('userApplicationsList');
+            const applicationDiv = document.createElement('div');
+            applicationDiv.classList.add('bg-gray-100', 'p-6', 'rounded-lg', 'shadow-md', 'flex', 'justify-between', 'items-center', 'application');
+            applicationDiv.innerHTML = `
+                <div>
+                    <p class="text-lg font-medium">${application.name}</p>
+                    <p class="text-sm text-gray-600 application-email">${application.email}</p>
+                    <p class="text-sm text-gray-600">Username: ${application.username}</p>
+                    <p class="text-sm text-gray-600">Reason: ${application.reason}</p>
+                    <p class="text-sm text-gray-600">Status: ${application.status}</p>
+                </div>
+            `;
+            userApplicationsList.appendChild(applicationDiv);
+        }
+
+        function updateUserApplicationStatus(email, status) {
+            const userApplicationsList = document.getElementById('userApplicationsList');
+            const applications = userApplicationsList.querySelectorAll('.application');
+            applications.forEach(application => {
+                const applicationEmail = application.querySelector('.application-email').innerText;
+                if (applicationEmail === email) {
+                    application.querySelector('.text-gray-600:last-child').innerText = `Status: ${status}`;
+                }
+            });
+        }
+
+        function sendDecisionEmail(email, decision) {
+            const message = decision === 'accept' ? 'Your application has been accepted.' : 'Your application has been rejected.';
+            fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Email sent:', data);
+            })
+            .catch(error => {
+                console.error('Error sending email:', error);
+            });
+        }
+
+        setTimeout(() => {
+            document.getElementById('discordArticle').classList.remove('hidden');
+        }, 10000);
+
+        document.getElementById('closeDiscordArticle').addEventListener('click', function() {
+            document.getElementById('discordArticle').classList.add('hidden');
+        });
+  </script>
+ </body>
+</html>
